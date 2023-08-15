@@ -13,3 +13,25 @@ button.addEventListener("click", function () {
   let converTotalWith = withdrawValueparse + parseinputValue;
   withdrawValue.innerText = converTotalWith;
 });
+const buttonWithdraw = document.getElementById("Withdraw-button");
+buttonWithdraw.addEventListener("click", function () {
+  let withd = document.getElementById("Withdraw-much");
+  let withdd = withd.innerText;
+  let parsewithval = parseFloat(withdd);
+  let within = document.getElementById("withinput").value;
+  let withind = parseFloat(within);
+  let totalinD = parsewithval + withind;
+  withd.innerText = totalinD;
+  let withbal = document.getElementById("Withdraw-value");
+  let withtext = withbal.innerText;
+  let withpar = parseFloat(withtext);
+
+  if (within > withtext) {
+    alert("oi beta tor baper bank e taka nai");
+  } else {
+    const withtotalValue = withpar - withind;
+    withbal.innerText = withtotalValue;
+    return;
+  }
+  return;
+});
